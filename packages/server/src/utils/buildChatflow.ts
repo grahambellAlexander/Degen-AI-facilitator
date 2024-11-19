@@ -10,7 +10,7 @@ import {
     mapExtToInputField,
     generateFollowUpPrompts,
     IServerSideEventStreamer
-} from 'flowise-components'
+} from 'degenaifacilitator-components'
 import { StatusCodes } from 'http-status-codes'
 import {
     IncomingInput,
@@ -55,7 +55,7 @@ import { utilAddChatMessage } from './addChatMesage'
 import { buildAgentGraph } from './buildAgentGraph'
 import { getErrorMessage } from '../errors/utils'
 import { ChatMessage } from '../database/entities/ChatMessage'
-import { IAction } from 'flowise-components'
+import { IAction } from 'degenaifacilitator-components'
 import { FLOWISE_METRIC_COUNTERS, FLOWISE_COUNTER_STATUS } from '../Interface.Metrics'
 
 /**

@@ -7,7 +7,7 @@ import {
     IDocument,
     removeFilesFromStorage,
     removeSpecificFileFromStorage
-} from 'flowise-components'
+} from 'degenaifacilitator-components'
 import {
     ChatType,
     DocumentStoreStatus,

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { getStoragePath } from 'flowise-components'
+import { getStoragePath } from 'degenaifacilitator-components'
 
 const getPathForUploads = async (req: Request, res: Response, next: NextFunction) => {
     try {

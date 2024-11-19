@@ -1,7 +1,7 @@
 import { Request } from 'express'
 import * as path from 'path'
 import * as fs from 'fs'
-import { addArrayFilesToStorage, IDocument, mapExtToInputField, mapMimeTypeToInputField } from 'flowise-components'
+import { addArrayFilesToStorage, IDocument, mapExtToInputField, mapMimeTypeToInputField } from 'degenaifacilitator-components'
 import { getRunningExpressApp } from './getRunningExpressApp'
 import { getErrorMessage } from '../errors/utils'
 

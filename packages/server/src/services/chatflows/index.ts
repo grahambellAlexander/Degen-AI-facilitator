@@ -1,4 +1,4 @@
-import { removeFolderFromStorage } from 'flowise-components'
+import { removeFolderFromStorage } from 'degenaifacilitator-components'
 import { StatusCodes } from 'http-status-codes'
 import { ChatflowType, IReactFlowObject } from '../../Interface'
 import { ChatFlow } from '../../database/entities/ChatFlow'

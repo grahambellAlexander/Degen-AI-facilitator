@@ -2,7 +2,7 @@ import { Request } from 'express'
 import * as fs from 'fs'
 import * as path from 'path'
 import { cloneDeep, omit } from 'lodash'
-import { ICommonObject, IMessage, addArrayFilesToStorage, mapMimeTypeToInputField, mapExtToInputField } from 'flowise-components'
+import { ICommonObject, IMessage, addArrayFilesToStorage, mapMimeTypeToInputField, mapExtToInputField } from 'degenaifacilitator-components'
 import logger from '../utils/logger'
 import {
     buildFlow,
