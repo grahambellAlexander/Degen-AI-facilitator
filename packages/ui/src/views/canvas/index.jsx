@@ -760,231 +760,25 @@ const Canvas = () => {
                 {activeTab === 1 && (
                     <div role='tabpanel' hidden={activeTab !== 1}>
                         <div>
-                            <Box sx={{ height: '100vh', width: '100%' }}>
-                                <div className='reactflow-parent-wrapper'>
-                                    <Box sx={{ display: 'flex' }}>
-                                        {/* Sidebar */}
-                                        <MainCard
-                                            content={true}
-                                            sx={{
-                                                height: '94.5vh',
-                                                width: '450px',
-                                                borderRight: '1px solid #ccc',
-                                                borderRadius: '0px',
-                                                overflowY: 'auto',
-                                                overflowX: 'none',
-                                                mt: 6.5
-                                            }}
-                                        >
-                                            <Box sx={{ pt: 3 }}>
-                                                {/* Header */}
-
-                                                <DropdownMenu />
-
-                                                {/* Subdomain */}
-
-                                                <Box sx={{ mt: 3, mb: 3, color: '#E4E4E7', fontSize: '13px' }}>
-                                                    <FormLabel tooltip='Help about subdomain'>Custom subdomain</FormLabel>
-                                                    <TextField
-                                                        fullWidth
-                                                        size='small'
-                                                        placeholder='acme-stack-ai.com'
-                                                        sx={{
-                                                            mb: 1,
-                                                            backgroundColor: '#F0F0F3',
-                                                            height: '38px',
-                                                            '& .MuiOutlinedInput-notchedOutline': {
-                                                                borderColor: '#D9D9E0',
-                                                                borderRadius: '4px'
-                                                            },
-                                                            '& .MuiSelect-select': {
-                                                                display: 'flex',
-
-                                                                borderRadius: '4px',
-                                                                alignItems: 'center',
-                                                                gap: 1,
-                                                                padding: '8px 14px',
-                                                                backgroundColor: '#F0F0F3'
-                                                            }
-                                                        }}
-                                                        InputProps={{
-                                                            endAdornment: (
-                                                                <InputAdornment position='end'>
-                                                                    <Button
-                                                                        disabled
-                                                                        variant='contained'
-                                                                        size='small'
-                                                                        sx={{
-                                                                            height: '32px',
-                                                                            backgroundColor: '#27272A',
-                                                                            '&.Mui-disabled': {
-                                                                                backgroundColor: '#27272A',
-                                                                                color: '#71717A'
-                                                                            }
-                                                                        }}
-                                                                    >
-                                                                        Verify
-                                                                    </Button>
-                                                                </InputAdornment>
-                                                            )
-                                                        }}
-                                                    />
-                                                </Box>
-                                                {/* General Section */}
-                                                <StyledAccordion
-                                                    expanded={expanded.includes('general')}
-                                                    onChange={handleAccordionChange('general')}
-                                                >
-                                                    <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                                                        <Typography sx={{ color: '#1C2024' }}>General</Typography>
-                                                    </StyledAccordionSummary>
-                                                    <AccordionDetails sx={{ p: 0 }}>
-                                                        <Box sx={{ mb: 3 }}>
-                                                            <FormLabel tooltip='Help about name'>Name</FormLabel>
-                                                            <TextField
-                                                                fullWidth
-                                                                size='small'
-                                                                placeholder='Application Name'
-                                                                sx={{
-                                                                    mb: 1,
-                                                                    backgroundColor: '#F0F0F3',
-                                                                    height: '38px',
-                                                                    '& .MuiOutlinedInput-notchedOutline': {
-                                                                        borderColor: '#D9D9E0',
-                                                                        borderRadius: '4px'
-                                                                    },
-                                                                    '& .MuiSelect-select': {
-                                                                        display: 'flex',
-
-                                                                        borderRadius: '4px',
-                                                                        alignItems: 'center',
-                                                                        gap: 1,
-                                                                        padding: '8px 14px',
-                                                                        backgroundColor: '#F0F0F3'
-                                                                    }
-                                                                }}
-                                                            />
-                                                        </Box>
-
-                                                        <Box sx={{ mb: 3 }}>
-                                                            <FormLabel tooltip='Help about description'>Description</FormLabel>
-                                                            <TextField
-                                                                fullWidth
-                                                                multiline
-                                                                rows={4}
-                                                                size='small'
-                                                                placeholder='What does your application do? How does it behave? How should the user interact with it?'
-                                                                sx={{
-                                                                    backgroundColor: '#F0F0F3',
-
-                                                                    '& .MuiOutlinedInput-notchedOutline': {
-                                                                        borderColor: '#D9D9E0',
-                                                                        borderRadius: '4px'
-                                                                    },
-                                                                    '& .MuiSelect-select': {
-                                                                        display: 'flex',
-
-                                                                        borderRadius: '4px',
-                                                                        alignItems: 'center',
-                                                                        gap: 1,
-                                                                        padding: '8px 14px',
-                                                                        backgroundColor: '#F0F0F3'
-                                                                    }
-                                                                }}
-                                                            />
-                                                        </Box>
-
-                                                        <Box sx={{ mb: 3 }}>
-                                                            <FormLabel tooltip='Help about disclaimer'>Disclaimer Message</FormLabel>
-                                                            <TextField
-                                                                fullWidth
-                                                                multiline
-                                                                rows={2}
-                                                                size='small'
-                                                                placeholder='AI assistants might make mistakes. Check important information.'
-                                                                sx={{
-                                                                    mb: 1,
-                                                                    backgroundColor: '#F0F0F3',
-                                                                    height: '38px',
-                                                                    '& .MuiOutlinedInput-notchedOutline': {
-                                                                        borderColor: '#D9D9E0',
-                                                                        borderRadius: '4px'
-                                                                    },
-                                                                    '& .MuiSelect-select': {
-                                                                        display: 'flex',
-
-                                                                        borderRadius: '4px',
-                                                                        alignItems: 'center',
-                                                                        gap: 1,
-                                                                        padding: '8px 14px',
-                                                                        backgroundColor: '#F0F0F3'
-                                                                    }
-                                                                }}
-                                                            />
-                                                        </Box>
-                                                    </AccordionDetails>
-                                                </StyledAccordion>
-
-                                                {/* Fields Section */}
-                                                <StyledAccordion
-                                                    expanded={expanded.includes('fields')}
-                                                    onChange={handleAccordionChange('fields')}
-                                                >
-                                                    <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                                                        <Typography sx={{ color: '#1C2024' }}>Fields</Typography>
-                                                    </StyledAccordionSummary>
-                                                    <AccordionDetails sx={{ p: 0 }}>
-                                                        {/* Inputs */}
-                                                        <Box sx={{ mb: 3 }}>
-                                                            <FormLabel tooltip='Help about inputs'>Inputs</FormLabel>
-                                                            <TableHeader>
-                                                                <Box></Box>
-                                                                <Typography variant='body2'>Node ID</Typography>
-                                                                <Typography variant='body2'>Alias (optional)</Typography>
-                                                                <Typography variant='body2'>Required</Typography>
-                                                            </TableHeader>
-                                                            <TableRow>
-                                                                <Checkbox size='small' checked={true} disabled />
-                                                                <Typography variant='body2'>in-0</Typography>
-                                                                <TextField
-                                                                    size='small'
-                                                                    defaultValue='Input 1'
-                                                                    sx={{
-                                                                        borderRadius: '6px'
-                                                                    }}
-                                                                />
-                                                                <Checkbox size='small' />
-                                                            </TableRow>
-                                                        </Box>
-
-                                                        {/* Outputs */}
-                                                        <Box>
-                                                            <FormLabel tooltip='Help about outputs'>Outputs</FormLabel>
-                                                            <TableHeader>
-                                                                <Box></Box>
-                                                                <Typography variant='body2'>Node ID</Typography>
-                                                                <Typography variant='body2'>Alias (optional)</Typography>
-                                                                <Box></Box>
-                                                            </TableHeader>
-                                                            <TableRow>
-                                                                <Checkbox size='small' checked={true} disabled />
-                                                                <Typography variant='body2'>out-0</Typography>
-                                                                <TextField
-                                                                    size='small'
-                                                                    defaultValue='Output 1'
-                                                                    sx={{
-                                                                        borderRadius: '6px'
-                                                                    }}
-                                                                />
-                                                                <Box></Box>
-                                                            </TableRow>
-                                                        </Box>
-                                                    </AccordionDetails>
-                                                </StyledAccordion>
-                                            </Box>
-                                        </MainCard>
-                                    </Box>
-                                </div>
+                            <Box sx={{ height: '100vh', width: '100%',
+                    backgroundColor: 'background.default',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    gap: 2,
+                    position: 'fixed',
+                   
+                    
+                    padding: '2px'
+                }}>
+                
+            
+                <Typography variant='h4' component='h1'>
+                Coming Soon
+                </Typography>
+                <Typography variant='body1'>This feature will be available soon!</Typography>
                             </Box>
                         </div>
                     </div>

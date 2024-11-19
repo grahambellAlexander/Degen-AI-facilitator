@@ -20,7 +20,7 @@ import APICodeDialog from '@/views/chatflows/APICodeDialog'
 import ViewMessagesDialog from '@/ui-component/dialog/ViewMessagesDialog'
 import ChatflowConfigurationDialog from '@/ui-component/dialog/ChatflowConfigurationDialog'
 import UpsertHistoryDialog from '@/views/vectorstore/UpsertHistoryDialog'
-
+import { useDialog } from '@/contexts/DialogContext'
 // API
 import chatflowsApi from '@/api/chatflows'
 
@@ -36,7 +36,7 @@ import ExportAsTemplateDialog from '@/ui-component/dialog/ExportAsTemplateDialog
 import Logo from '../../assets/images/logo.png'
 // ==============================|| CANVAS HEADER ||============================== //
 
-const CanvasHeader = ({ chatflow, isAgentCanvas, handleSaveFlow, handleDeleteFlow, handleLoadFlow, activeTab, onTabChange}) => {
+const CanvasHeader = ({ chatflow, isAgentCanvas, handleSaveFlow, handleDeleteFlow, handleLoadFlow, activeTab, onTabChange }) => {
     const theme = useTheme()
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -66,7 +66,7 @@ const CanvasHeader = ({ chatflow, isAgentCanvas, handleSaveFlow, handleDeleteFlo
     const updateChatflowApi = useApi(chatflowsApi.updateChatflow)
     const canvas = useSelector((state) => state.canvas)
 
-    
+    const { showComingSoon } = useDialog()
 
     const onSettingsItemClick = (setting) => {
         setSettingsOpen(false)
@@ -277,8 +277,7 @@ const CanvasHeader = ({ chatflow, isAgentCanvas, handleSaveFlow, handleDeleteFlo
                                     alt='Logo'
                                     src={Logo}
                                 />
-                                <NavigationTab   activeTab={activeTab}
-        onTabChange={onTabChange}/>
+                                <NavigationTab activeTab={activeTab} onTabChange={onTabChange} />
                                 {chatflow?.id && (
                                     <ButtonBase title='Edit Name' sx={{ borderRadius: '50%' }}>
                                         <Avatar
@@ -373,12 +372,12 @@ const CanvasHeader = ({ chatflow, isAgentCanvas, handleSaveFlow, handleDeleteFlo
                     <BreadcrumbNav />
                 </Box>
                 <Box flexDirection='row' alignItems='center'>
-                    <ActionButton>
+                    <ActionButton onClick={showComingSoon}>
                         <PlayArrow />
                         Run
                     </ActionButton>
-                    <ActionButton>Save</ActionButton>
-                    <PublishButton>Publish</PublishButton>
+                    <ActionButton onClick={showComingSoon}>Save</ActionButton>
+                    <PublishButton onClick={showComingSoon}>Publish</PublishButton>
                 </Box>
             </Stack>
             <Settings
