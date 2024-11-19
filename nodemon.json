@@ -1,0 +1,15 @@
+{
+    "watch": [
+      "packages/server/",
+      "packages/components/",
+      "packages/ui/"
+    ],
+    "ext": "js,jsx,ts,tsx,json",
+    "ignore": [
+      "node_modules",
+      "dist",
+      "*.test.js"
+    ],
+    "exec": "pnpm start"
+  }
+  
