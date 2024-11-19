@@ -58,7 +58,10 @@
         "remark-math": "^5.1.1",
         "socket.io-client": "^4.6.1",
         "uuid": "^9.0.1",
-        "yup": "^0.32.9"
+        "yup": "^0.32.9",
+        "vite": "^5.0.2",
+        "vite-plugin-pwa": "^0.17.0",
+        "vite-plugin-react-js-support": "^1.0.7"
     },
     "scripts": {
         "dev": "vite",

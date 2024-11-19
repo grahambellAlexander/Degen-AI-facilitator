@@ -811,6 +811,15 @@ importers:
       uuid:
         specifier: ^9.0.1
         version: 9.0.1
+      vite:
+        specifier: ^5.0.2
+        version: 5.1.6(@types/node@20.12.12)(sass@1.71.1)(terser@5.29.1)
+      vite-plugin-pwa:
+        specifier: ^0.17.0
+        version: 0.17.5(vite@5.1.6(@types/node@20.12.12)(sass@1.71.1)(terser@5.29.1))(workbox-build@7.0.0(@types/babel__core@7.20.5))(workbox-window@7.0.0)
+      vite-plugin-react-js-support:
+        specifier: ^1.0.7
+        version: 1.0.7
       yup:
         specifier: ^0.32.9
         version: 0.32.11
@@ -848,15 +857,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.5.2
-      vite:
-        specifier: ^5.0.2
-        version: 5.1.6(@types/node@20.12.12)(sass@1.71.1)(terser@5.29.1)
-      vite-plugin-pwa:
-        specifier: ^0.17.0
-        version: 0.17.5(vite@5.1.6(@types/node@20.12.12)(sass@1.71.1)(terser@5.29.1))(workbox-build@7.0.0(@types/babel__core@7.20.5))(workbox-window@7.0.0)
-      vite-plugin-react-js-support:
-        specifier: ^1.0.7
-        version: 1.0.7
 
 packages:
 
